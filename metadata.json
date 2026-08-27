@@ -1,0 +1,8 @@
+{
+  "name": "The Fire at Roy Bari Coop",
+  "description": "An interactive detective case investigation game reviewing the reopened Roy Bari Estate fire case.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #0b0d10;
+    color: #e5e7eb;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar for Dossiers and Terminals */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #11141a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #272f3d;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b4759;
+}
+
+/* Classified Document & Investigation Aesthetics */
+.classified-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.classified-scanline {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.3)
+  );
+  background-size: 100% 4px;
+}
+
+.stamp-red {
+  border: 2px solid #ef4444;
+  color: #ef4444;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  transform: rotate(-3deg);
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 2px;
+  box-shadow: inset 0 0 8px rgba(239, 68, 68, 0.2);
+}
+
+.stamp-gold {
+  border: 2px solid #eab308;
+  color: #facc15;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  transform: rotate(2deg);
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 2px;
+  box-shadow: inset 0 0 8px rgba(234, 179, 8, 0.2);
+}
+
+.folder-tab {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 100%, 0 100%);
+}
