@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import http from "http";
 import mongoose from "mongoose";
 import { Server } from "socket.io";
+import roomRoutes from "./routes/roomRoutes.js";
 
 dotenv.config();
 
@@ -32,6 +33,8 @@ app.use(
 );
 
 app.use(express.json());
+
+app.use("/api/rooms", roomRoutes);
 
 app.get("/", (_req, res) => {
   res.json({
